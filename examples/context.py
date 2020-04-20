@@ -11,7 +11,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 # From Environment Library
 import selfpoweredsys.environment.usgs as usgs
-import selfpoweredsys.environment.ehdc as ehdc
 import selfpoweredsys.environment.timeseries as timeseries
 
 # From Harvester Library
