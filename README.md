@@ -6,7 +6,7 @@ Features and capabilities:
  - Functions to automatically download streamflow velocity data from the usgs NWIS database and evaluate missing samples.
  - To simulate energy generation from minituarized hydro turbine models and streamflow data. 
  - To simulate energy storage and consumption by a sensor station.
- - To evaluate missing samples given monitoring station energy consumption, storage and generation.
+ - To evaluate the operation of the self-powered monitoring station given energy consumption, storage and generation.
 
 Modules: 
  - Energy Harvesting Evironment (environment)
