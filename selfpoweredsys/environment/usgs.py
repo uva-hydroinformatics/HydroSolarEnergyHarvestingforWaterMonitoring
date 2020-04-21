@@ -188,9 +188,8 @@ def txt2pkldataframe(file_name, output_folder=None, input_folder=None, save_file
     # Converts the timestamp string information into pandas timezone aware timestamp 
     df['timestamp']=df.apply(lambda x: pd.Timestamp(x['str_timestamp'], tz= timezone_translator(x['tz'], verbose=verbose)) , axis=1)
 
-
-    # Formats dataframe to contain only timestamp and flow
-    formated_df = df[['timestamp','flow']]
+    # Formats dataframe to contain only timestamp and flow and sorts by timestamps
+    formated_df = df[['timestamp','flow']].sort_values(by='timestamp', ascending=True)
     
     # Selects timestamp as the dataframe index
     formated_df.set_index('timestamp',inplace=True) 
@@ -210,16 +209,16 @@ def txt2pkldataframe(file_name, output_folder=None, input_folder=None, save_file
         # Checks if output folder option is used
         if output_folder==None:
             # Saves pkl file in current directory 
-            formated_df.to_pickle('./'+file_id+'.pkl')
+            formated_df.to_pickle('./'+file_id+'_UTC.pkl')
 
         else:
             # Saves pkl file in given folder
-            formated_df.to_pickle('./'+output_folder+'/'+file_id+'.pkl')
+            formated_df.to_pickle('./'+output_folder+'/'+file_id+'_UTC.pkl')
 
         # Checks if verbose is enabled and prints pkl write success message
         if (verbose==True):
             print(" ")
-            print("File "+file_name+" was successfully saved in pkl format!")
+            print("File "+file_name+" was successfully saved in pkl format (UTC timezone)!")
 
     # Checks if output dataframe option is enabled
     if output_df==True:
