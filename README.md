@@ -16,4 +16,6 @@ Modules:
  - Simulation Main Scripts (simtools)
 
 
+# paper_sims_Maghami_etal
 
+This folder contains the developed codes to utilize the selfpoweredsys for the study "Exploring the Complementary Relationship between Solar and Hydro Energy Harvesting for Self-Powered Water Monitoring in Low-Light Conditions"
