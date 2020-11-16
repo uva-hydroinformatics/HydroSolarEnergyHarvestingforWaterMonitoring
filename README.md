@@ -1,31 +1,13 @@
-# Self-Powered Systems Simulator (selfpoweredsys)
+# Paper_sims_Maghami_etal
 
-The selfpoweredsys library was developed to simulate self-powered sensors operating under a fluctuating energy source.
-
-Features and capabilities:
- - Functions to automatically download streamflow velocity data from the usgs NWIS database and evaluate missing samples.
- - To simulate energy generation from minituarized hydro turbine models and streamflow data. 
- - To simulate energy storage and consumption by a sensor station.
- - To evaluate the operation of the self-powered monitoring station given energy consumption, storage and generation.
-
-Modules: 
- - Energy Harvesting Evironment (environment)
- - Energy Storage (estorage)
- - Energy Harvester (harvester)
- - Energy Consumption (load)
- - Simulation Main Scripts (simtools)
-
-
-# paper_sims_Maghami_etal
-
-This folder contains the developed codes to utilize the selfpoweredsys library for the study "Exploring the Complementary Relationship between Solar and Hydro Energy Harvesting for Self-Powered Water Monitoring in Low-Light Conditions".
+This folder contains the developed codes to perform simulations for the study "Exploring the Complementary Relationship between Solar and Hydro Energy Harvesting for Self-Powered Water Monitoring in Low-Light Conditions".
 
 The developed codes for this study:
 
-- Simulate the energy generation from a minituarized hydro turbine model and streamflow data using the selfpoweredsys libray.
+- Simulate the energy generation from a minituarized hydro turbine model and streamflow data using the model.
 - Simulate the energy generation from solar source using the PVLib library developed by Sandia National Laboratory (https://pvlib-python.readthedocs.io/en/stable).
-- Simulate energy storage and consumption by a sensor station using the selfpoweredsys libray.
-- Evaluate the operation of the self-powered monitoring station given energy consumption, storage and generation using the selfpoweredsys libray.
+- Simulate energy storage and consumption by a sensor station using energy store and consumption model introdued by Buchli et al. (2014).
+- Evaluate the operation of the self-powered monitoring station given energy consumption, storage and generation.
 
 The data availability:
 
